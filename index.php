@@ -16,4 +16,11 @@ try{
 catch (PDOException $error){
     echo'Connection Failed '.$error->getMessage().'<br>';
 }
+try{
+    $query=$connection->prepare("SELECT *FROM accounts where id<6");
+    $query->execute();
+    $output=$query->setFetchMode(PDO::FETCH_ASSOC);
+    $output=$query->fetchAll();
+    print_r($output);
+}
 ?>
