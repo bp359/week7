@@ -14,6 +14,6 @@ try{
     echo'Connected Successfully'.'<br>';
 }
 catch (PDOException $error){
-    echo'Connection failed'.$error->getMessage().'<br>';
+    echo'Connection Failed '.$error->getMessage().'<br>';
 }
 ?>
